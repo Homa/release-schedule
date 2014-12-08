@@ -1,0 +1,234 @@
+$line-thickness: 3px;
+
+//
+// Helper
+// --------------------------------------------------
+//override bootstrap rounded corners
+.form-control, .input-group-addon, .btn {
+    border-radius: 0px;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid $app-gray-very-light;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+//
+// Top Work Stream buttons
+// --------------------------------------------------
+.workstream-button {
+    margin: 4px;
+    background-color: $app-gray-very-light;
+    overflow: auto;
+    float: left;
+}
+
+.workstream-button label {
+    float: left;
+    width: auto;
+    margin: 0px;
+}
+
+.workstream-button label span {
+    text-align: center;
+    display: block;
+    padding: 10px 20px;
+}
+
+.workstream-button label input {
+    position: absolute;
+
+    /*hide the checkbox box*/
+    top:-40px;
+}
+
+.workstream-button input:checked + span,
+.all-selected
+{
+ color: #fff;
+}
+
+.workstream-button input.all:checked + span{
+    background-color: $app-gray-darker;
+}
+
+//
+// Tasks
+// --------------------------------------------------
+.tasks-wrapper, .grid-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tasks-wrapper {
+    background-image: url(../assets/images/pattern-bc1j.png);
+    border-top: $app-gray-silver 1px solid;
+    border-bottom: $app-gray-silver 1px solid;
+    padding-top: 10px;
+}
+
+.task-container {
+    position: relative;
+    padding-top: 45px;
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.task-track {
+    height: 1px;
+    width: 100%;
+    margin-top: -5px;
+    top: 50%;
+    left: 0;
+    position: absolute;
+    background-color: $app-gray-silver;
+}
+
+.task-title-wrapper {
+    height: 30px;
+    margin-top: -15px;
+    top: 0;
+    bottom: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    background-color: $app-gray-very-light;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    color: #fff;
+    z-index: 201;
+}
+
+.end-dev-to-release-line {
+    position: absolute;
+    bottom: -1px;
+    height: $line-thickness;
+    z-index: 20;
+}
+
+.start-dev-point, .end-dev-point {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    //cursor: pointer;
+    margin-left: -7.5px;
+    margin-top: -7.5px;
+    border-radius: 10px;
+    border-width: $line-thickness;
+    border-style: solid;
+    background: #fff;
+    z-index: 202;
+}
+
+.release-point {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-width: $line-thickness;
+    border-style: solid;
+    //cursor: pointer;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+//
+// Timeline
+// --------------------------------------------------
+.header-wrapper {
+    position: relative;
+}
+
+.grid {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+}
+
+.grid div {
+    position: absolute;
+    border-left: $app-gray-very-light 1px solid;
+    top: 0px;
+    bottom: 0px;
+}
+
+.month {
+    position: relative;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.month div {
+    font-size: 80%;
+    position: absolute;
+    height: 40px;
+    border-left: $app-gray-very-light 1px solid;
+    padding-left: 5px;
+    top: 0px;
+}
+
+.today {
+    background-color: $app-gray;//$app-red;
+    min-width: 2px;
+}
+
+//
+// Task info box
+// --------------------------------------------------
+.hidden {
+    display: none;
+}
+
+.task-info {
+    top: 0;
+    padding: 15px 0;
+    position: fixed;
+    z-index: 1000;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    visibility: visible;
+}
+
+.task-info .task-info-arrow {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 0px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid $app-gray;
+}
+
+.task-info .task-info-inner {
+    white-space: normal;
+    max-width: 200px;
+    padding: 8px;
+    color: #fff;
+    text-align: normal;
+    text-decoration: none;
+    background-color: $app-gray;
+    border-radius: 0px;
+}
