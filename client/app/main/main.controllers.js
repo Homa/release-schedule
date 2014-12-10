@@ -27,9 +27,9 @@ angular.module('releaseScheduleApp')
             $scope.addedWorkstreams.splice(i, 1);
         }
 
-        //if($scope.addedWorkstreams.length === 0) {
-        //    $scope.all = true;
-        //}
+        if($scope.addedWorkstreams.length === 0) {
+            $scope.all = true;
+        }
     };
 
     var reset = function () {
